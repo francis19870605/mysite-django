@@ -6,13 +6,12 @@
 
 {% block content %}
     <div class="row text-center vertical-middle-sm">
-        <h1>Login--Built in Method of Django</h1>
 
         {% if form.errors %}
             <p>Your username and password didn't match. Please try again.</p>
         {% endif %}
 
-        <p>Input your username and password</p>
+        <p>请输入您的用户名和密码</p>
         {% if next %}
         <form class="form-horizontal" action="{% url 'account:user_login' %}?next={{ next }}" method="post">
         {% else %}
@@ -32,7 +31,7 @@
                     <span class="glyphicon glyphicon-floppy-open"></span>Password</label>
                 <div class="col-md-6 text-left">{{ form.password }}</div>
             </div>
-            <input type="submit" class="btn bun-primary btn-lg" value="login"/>
+            <input type="submit" class="btn bun-primary btn-lg" value="登录"/>
         </form>
     </div>
 {% endblock %}
